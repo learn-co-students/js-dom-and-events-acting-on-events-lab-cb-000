@@ -30,13 +30,10 @@ function addNewLiOnClick(){
 
 
 function clearEmployeeListOnLinkClick(){
-  debugger;
-  let nodes = document.querySelectorAll('ul.employee-list li');
-  // for each (var node in nodes){
-  //   node.remove();
-  // }
-
-  for (i = 0; i < nodes.length; i++) {
-    nodes[i].remove();
-  }
+  document.querySelector('a').addEventListener('click', function(event){
+    let nodes = document.querySelectorAll('ul.employee-list li');
+    for (i = 0; i < nodes.length; i++) {
+      nodes[i].remove();
+    }
+  })
 }
